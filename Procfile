@@ -1,0 +1,1 @@
+web: gunicorn oicspm.wsgi --log-file -
