@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% block title %}
+{% endblock %}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Sublime project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% block css %}
+{% endblock %}
+
+
+</head>
+
+<body class="preloading">
+
+{% include 'homepage/navbar.html' %}
+{% block content %}
+{% endblock %}
+
+{% include 'homepage/footer.html' %}
+{% block js %}
+{% endblock %}
+
+<script>
+    $(window).on('load', function (event) {
+        $('body').removeClass('preloading');
+        $('.loading').delay(500).fadeOut('fast');
+    });
+</script>
+
+</body>
+
+</html>
