@@ -1,6 +1,6 @@
 from django.db import models
-from product.models import Promotion
-from customer.models import Customer
+from product.models import *
+from user.models import Customer
 
 # Create your models here.
 
@@ -11,5 +11,5 @@ class Cart(models.Model):
 
 class CartDetail(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    item = models.ForeignKey(Promotion, on_delete=models.CASCADE)
+    item = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)

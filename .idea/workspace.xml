@@ -3,7 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="322feca2-4895-4656-8fab-4fc9531b3517" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0002_auto_20190927_1347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0003_carousel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oicspm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oicspm/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/migrations/0002_auto_20190926_0247.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/migrations/0003_remove_order_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0002_carousel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0003_auto_20190927_1315.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0004_auto_20190927_1334.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0005_delete_carousel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/migrations/0006_auto_20190928_1659.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/homepage/styles/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/homepage/styles/cart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
