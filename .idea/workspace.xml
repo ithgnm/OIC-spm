@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="322feca2-4895-4656-8fab-4fc9531b3517" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/homepage/images/amazon_alexa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/homepage/images/google_home.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/homepage/images/mi_mix_alpha.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/homepage/images/mi_mix_alpha_2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/product/mi_smart_led_desk_lamp_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/product/mi_smart_led_desk_lamp_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/homepage/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/homepage/styles/main_styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
