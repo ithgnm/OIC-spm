@@ -25,6 +25,25 @@
 
 	<!-- Home -->
 
+	{% for item in carousel %}
+	<div class="home">
+		<div class="home_container">
+			<div class="home_background" style="background-image:url({{item.image.url}})"></div>
+			<div class="home_content_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_content">
+								<div class="home_title">{{item.title}}<span>.</span></div>
+								<div class="home_text"><p>{{item.description}}</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% empty %}
 	<div class="home">
 		<div class="home_container">
 			<div class="home_background" style="background-image:url({% static 'homepage/images/categories.jpg' %})"></div>
@@ -33,8 +52,7 @@
 					<div class="row">
 						<div class="col">
 							<div class="home_content">
-								<div class="home_title">Smart Phones<span>.</span></div>
-								<div class="home_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</p></div>
+								<div class="home_title">{{product.title}}<span>.</span></div>
 							</div>
 						</div>
 					</div>
@@ -42,6 +60,7 @@
 			</div>
 		</div>
 	</div>
+	{% endfor %}
 
 	<!-- Product Details -->
 
@@ -52,7 +71,7 @@
 				<!-- Product Image -->
 				<div class="col-lg-6">
 					<div class="details_image">
-						<div class="details_image_large"><img src="{% static 'homepage/images/details_1.jpg' %}" alt=""><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
+						<div class="details_image_large"><img src="{{product.image.url}}" alt=""><div class="product_extra product_hot"><a href="categories.html">Hot</a></div></div>
 						<div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
 							<div class="details_image_thumbnail active" data-image="{% static 'homepage/images/details_1.jpg' %}"><img src="{% static 'homepage/images/details_1.jpg' %}" alt=""></div>
 							<div class="details_image_thumbnail" data-image="{% static 'homepage/images/details_2.jpg' %}"><img src="{% static 'homepage/images/details_2.jpg' %}" alt=""></div>
@@ -65,14 +84,19 @@
 				<!-- Product Content -->
 				<div class="col-lg-6">
 					<div class="details_content">
-						<div class="details_name">Smart Phone</div>
-						<div class="details_discount">$890</div>
-						<div class="details_price">$670</div>
+						<div class="details_name">{{product.title}}</div>
+						<div class="details_discount">${{product.price}}</div>
+						<div class="details_price">${{product.price}}</div>
 
 						<!-- In Stock -->
 						<div class="in_stock_container">
+							{% if product.active is False %}
 							<div class="availability">Availability:</div>
 							<span>In Stock</span>
+							{% else %}
+							<div class="availability">Availability:</div>
+							<span>Out of Stock</span>
+							{% endif %}
 						</div>
 						<div class="details_text">
 							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>

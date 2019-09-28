@@ -12,8 +12,10 @@
 									<li class="active"><a href="/">Home</a></li>
 									<li class="hassubs">
 										<a href="category">Products</a>
-										<ul>
-											<li><a href="#"></a></li>
+										<ul style="width: max-content">
+											{% for item in category %}
+											<li><a href="#">{{item.title}}</a></li>
+											{% endfor %}
 										</ul>
 									</li>
 									<li><a href="#">Offers</a></li>
@@ -83,8 +85,8 @@
 		<!-- Social -->
 		<div class="header_social">
 			<ul>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/ithgnm"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.instagram.com/ithgnm/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 			</ul>
 		</div>
 	</header>
@@ -107,7 +109,9 @@
 					<li class="page_menu_item has-children menu_mm">
 						<a href="category">Products<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
-							<li class="page_menu_item menu_mm"><a href="#"><i class="fa fa-angle-down"></i></a></li>
+							{% for item in category %}
+							<li class="page_menu_item menu_mm"><a href="#">{{item.title}}<i class="fa fa-angle-down"></i></a></li>
+							{% endfor %}
 						</ul>
 					</li>
 					<li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
