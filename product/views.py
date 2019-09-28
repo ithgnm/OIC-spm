@@ -12,3 +12,5 @@ def product_detail(request, id):
     content = {'product': product, 'related': related, 'carousel': carousel, 'category': category}
     return render(request, 'homepage/product.html', content)
 
+def category_view(request):
+    return render(request, 'homepage/category.html')
