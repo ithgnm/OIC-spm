@@ -160,8 +160,8 @@
 						{% for item in retaled %}
 						<!-- Product -->
 						<div class="product">
-							<div class="product_image"><img src="{% static 'homepage/images/product_1.jpg' %}" alt=""></div>
-							<div class="product_extra product_hot"><a href="categories.html">Hot</a></div>
+							<div class="product_image"><img src="{{item.image.url}}" alt=""></div>
+							<div class="product_extra product_hot"><a href="product/{{item.id}}">Hot</a></div>
 							<div class="product_content">
 								<div class="product_title"><a href="product.html">{{item.title}}</a></div>
 								<div class="product_price">${{item.price}}</div>
