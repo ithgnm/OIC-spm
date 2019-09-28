@@ -157,13 +157,13 @@
 					
 					<div class="product_grid">
 
-						{% for item in retaled %}
+						{% for item in related %}
 						<!-- Product -->
 						<div class="product">
-							<div class="product_image"><img src="{{item.image.url}}" alt=""></div>
-							<div class="product_extra product_hot"><a href="product/{{item.id}}">Hot</a></div>
+							<div class="product_image"><a href="/product/{{item.id}}"><img src="{{item.image.url}}" alt=""></a></div>
+							<div class="product_extra product_new"><a href="/product/{{item.id}}">New</a></div>
 							<div class="product_content">
-								<div class="product_title"><a href="product.html">{{item.title}}</a></div>
+								<div class="product_title"><a href="/product/{{item.id}}">{{item.title}}</a></div>
 								<div class="product_price">${{item.price}}</div>
 							</div>
 						</div>
