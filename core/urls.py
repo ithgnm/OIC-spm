@@ -12,7 +12,7 @@ urlpatterns = [
     path('contact', contact_view.as_view(), name='contact'),
 
     # Product
-    path('category', category_view),
+    path('<slug:slug>', category_view, name='category'),
     path('product/<int:id>', product_detail, name='product'),
 
     # Cart

@@ -11,10 +11,10 @@
 								<ul>
 									<li class="active"><a href="/">Home</a></li>
 									<li class="hassubs">
-										<a href="/category">Products</a>
+										<a href="#">Products</a>
 										<ul style="width: max-content">
 											{% for item in category %}
-											<li><a href="#">{{item.title}}</a></li>
+											<li><a href="/{{item.slug}}">{{item.title}}</a></li>
 											{% endfor %}
 										</ul>
 									</li>
@@ -107,10 +107,10 @@
 						<a href="/">Home</a>
 					</li>
 					<li class="page_menu_item has-children menu_mm">
-						<a href="category">Products<i class="fa fa-angle-down"></i></a>
+						<a href="#">Products<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							{% for item in category %}
-							<li class="page_menu_item menu_mm"><a href="#">{{item.title}}<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="/{{item.slug}}">{{item.title}}<i class="fa fa-angle-down"></i></a></li>
 							{% endfor %}
 						</ul>
 					</li>

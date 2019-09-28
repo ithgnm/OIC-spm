@@ -10,3 +10,6 @@ class Customer(models.Model):
     email = models.CharField(default='', max_length=100)
     address = models.CharField(default='', max_length=255)
     date_of_birth = models.DateTimeField(auto_now=False)
+
+    def __str__(self):
+        return self.username

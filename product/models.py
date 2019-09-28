@@ -7,7 +7,7 @@ from django.conf import settings
 
 class Category(models.Model):
     title = models.CharField(default='', max_length=100)
-    slug = models.CharField(max_length=100, default='')
+    slug = models.CharField(max_length=100, default='', unique=True)
     description = models.TextField(default='')
     active = models.BooleanField(default=True)
 
@@ -34,9 +34,12 @@ class Product(models.Model):
     image_tag.short_description = 'image'
     image_tag.allow_tags = True
 
+tag_type = ((0, 'New'), (1, 'Hot'))
+
 class Promotion(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     title = models.CharField(default='', max_length=100)
+    tag = models.IntegerField(choices=tag_type, default=0)
     price = models.IntegerField(default=0)
     sale_price = models.IntegerField(default=0)
     inventory = models.IntegerField(default=0)
