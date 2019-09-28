@@ -14,12 +14,29 @@
 										<a href="#">Products</a>
 										<ul style="width: max-content">
 											{% for item in category %}
-											<li><a href="/{{item.slug}}">{{item.title}}</a></li>
+											<li><a href="/category/{{item.slug}}">{{item.title}}</a></li>
 											{% endfor %}
 										</ul>
 									</li>
 									<li><a href="#">Offers</a></li>
 									<li><a href="/contact">Contact</a></li>
+									{% if user.is_authenticated %}
+									<li class="hassubs">
+										<a href="#">{{customer.display_name}}</a>
+										<ul style="width: max-content">
+											<li><a href="#">My Account</a></li>
+											<li><a href="/logout">Logout</a></li>
+										</ul>
+									</li>
+									{% else %}
+									<li class="hassubs">
+										<a href="#">Account</a>
+										<ul style="width: max-content">
+											<li><a href="/login">Login</a></li>
+											<li><a href="/#">Register</a></li>
+										</ul>
+									</li>
+									{% endif %}
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -110,12 +127,29 @@
 						<a href="#">Products<i class="fa fa-angle-down"></i></a>
 						<ul class="page_menu_selection menu_mm">
 							{% for item in category %}
-							<li class="page_menu_item menu_mm"><a href="/{{item.slug}}">{{item.title}}<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="/category/{{item.slug}}">{{item.title}}<i class="fa fa-angle-down"></i></a></li>
 							{% endfor %}
 						</ul>
 					</li>
 					<li class="page_menu_item menu_mm"><a href="#">Offers<i class="fa fa-angle-down"></i></a></li>
 					<li class="page_menu_item menu_mm"><a href="contact">Contact<i class="fa fa-angle-down"></i></a></li>
+					{% if user.is_authenticated %}
+					<li class="page_menu_item has-children menu_mm">
+						<a href="#">{{customer.display_name}}<i class="fa fa-angle-down"></i></a>
+						<ul class="page_menu_selection menu_mm">
+							<li class="page_menu_item menu_mm"><a href="#">My Account<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="/logout">Logout<i class="fa fa-angle-down"></i></a></li>
+						</ul>
+					</li>
+					{% else %}
+					<li class="page_menu_item has-children menu_mm">
+						<a href="#">Account<i class="fa fa-angle-down"></i></a>
+						<ul class="page_menu_selection menu_mm">
+							<li class="page_menu_item menu_mm"><a href="/login">Login<i class="fa fa-angle-down"></i></a></li>
+							<li class="page_menu_item menu_mm"><a href="/#">Register<i class="fa fa-angle-down"></i></a></li>
+						</ul>
+					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</div>
