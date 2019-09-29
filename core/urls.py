@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from user.views import *
 from product.views import *
 from cart.views import *
 from customer.views import *
@@ -21,5 +21,7 @@ urlpatterns = [
 
     # User
     path('login', login_view.as_view(), name='login'),
-    path('logout', logout_view, name='logout')
+    path('register', register_view.as_view(), name='register'),
+    path('account', account_view.as_view(), name='account'),
+    path('logout', logout_view, name='logout'),
 ]

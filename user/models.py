@@ -6,4 +6,4 @@ from django.contrib.auth.models import AbstractUser
 class Customer(AbstractUser):
     phone_number = models.CharField(default='', max_length=15)
     address = models.CharField(default='', max_length=255)
-    date_of_birth = models.DateTimeField(null=True)
+    date_of_birth = models.DateField(null=True)

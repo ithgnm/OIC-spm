@@ -36,7 +36,7 @@
 								<div class="breadcrumbs">
 									<ul>
 										<li><a href="/">Home</a></li>
-										<li>Login</li>
+										<li>Register</li>
 									</ul>
 								</div>
 							</div>
@@ -47,35 +47,54 @@
 		</div>
 	</div>
 
-    <!-- Login -->
+    <!-- Register -->
 
 	<div class="newsletter">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="newsletter_border"></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="newsletter_content text-center">
-						<div class="newsletter_title">Login to your Account</div>
-						{% if message is not None %}
-						<div class="newsletter_text" style="margin-top:39px"><h4 style="color:red">{{message}}</h4></div>
-						{% endif %}
-						<div class="newsletter_form_container" style="margin-top: 29px">
-							<form action="" method="post" id="login_form" class="newsletter_form">
-								{% csrf_token %}
-								<input type="text" class="newsletter_input" required="required" name="username">
-								<input type="password" class="newsletter_input" required="required" name="password" style="margin-top: 30px">
-								<button type="submit" class="newsletter_button trans_200"><span>Login</span></button>
-							</form>
-							<div style="margin-top:39px"><a style="color:#6c6a74" href="/register">Don't have an account? Register here!</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="container">
+                <div class="contact_form_container">
+                    <div class="newsletter_content text-center" style="margin-bottom:49px">
+                        <div class="newsletter_title">Register your Account</div>
+                        {% if message is not None %}
+                        <div class="newsletter_text" style="margin-top:39px"><h4 style="color:red">{{message}}</h4></div>
+                        {% endif %}
+                    </div>
+                    <form action="" method="post" id="contact_form" class="contact_form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <label for="first_name">First Name*</label>
+                                <input type="text" id="first_name" class="contact_input" required="required" name="first_name">
+                            </div>
+                            <div class="col-xl-6 last_name_col">
+                                <label for="last_name">Last Name*</label>
+                                <input type="text" id="last_name" class="contact_input" required="required" name="last_name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="username">Username*</label>
+                            <input type="text" id="username" class="contact_input" required="required" name="username">
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <label for="password">Password*</label>
+                                <input type="password" id="password" class="contact_input" required="required" name="password">
+                            </div>
+                            <div class="col-xl-6 last_name_col">
+                                <label for="confirm_password">Confirm Password*</label>
+                                <input type="password" id="confirm_password" class="contact_input" required="required" name="confirm_password">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" class="contact_input" required="required" name="email">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="newsletter_button trans_200"><span>Register</span></button>
+                        </div>
+                    </form>
+                    <div class="text-center" style="margin-top:39px"><a style="color:#6c6a74" href="/login">Already have an account? Login here.</a></div>
+                </div>
+        </div>
 	</div>
 
     <!-- Icon Boxes -->
